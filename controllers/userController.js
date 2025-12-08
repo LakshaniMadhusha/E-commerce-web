@@ -63,7 +63,7 @@ export function loginUser(req,res){
                             image:user.image
 
                         },
-                       process.env.JWT_SECRET // "cbc-6503"
+                       process.env.JWT_SECRET 
                     )
                     res.json({
                         token:token,

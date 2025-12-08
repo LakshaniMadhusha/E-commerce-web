@@ -19,7 +19,7 @@ app.use((req, res, next) => {
         const token = value.replace("Bearer ", "");
 
         jwt.verify(token, 
-           process.env.JWT_SECRET, //"cbc-6503", 
+           process.env.JWT_SECRET, 
             (err, decoded) => {
             if (err || decoded == null) {
                 return res.status(403).json({ message: "Unauthorized" });
